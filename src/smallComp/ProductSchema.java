@@ -7,6 +7,7 @@ public class ProductSchema {
 	private String description;
 	private int price;
 	private int quantity;
+	private int Threshold;
 	
 	public ProductSchema() {
         this.id = -1;
@@ -15,14 +16,16 @@ public class ProductSchema {
         this.description = "";
         this.price = 0;
         this.quantity = 0;
+        this.Threshold = 0;
     }
-    public ProductSchema(int id, String SKU, String name, String description, int price, int quantity) {
+    public ProductSchema(int id, String SKU, String name, String description, int price, int quantity,int Threshold) {
         this.id = id;
         this.SKU = SKU;
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
+        this.Threshold = Threshold;
     }
     public ProductSchema(String SKU, String name, String description, int price, int quantity) {
         this.SKU = SKU;
@@ -30,6 +33,7 @@ public class ProductSchema {
         this.description = description;
         this.price = price;
         this.quantity = quantity;
+        
     }
     
     
@@ -91,5 +95,14 @@ public class ProductSchema {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-	
+    
+    public int getThreshold() {
+        return Threshold;
+    }
+
+    // Setter for threshold
+    public void setThreshold(int threshold) {
+        this.Threshold	 = threshold;
+    }
+    
 }
